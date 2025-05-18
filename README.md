@@ -48,12 +48,19 @@ This project uses **Python 3.12.10** and [uv](https://github.com/astral-sh/uv) f
      pip install uv
      ```
 
-3. **Clone the repository**
+3a. **Clone the repository**
 ```
 git clone https://github.com/yourusername/vibe-trader.git
 ```
+After cloning the repository, it is necessary to change the directory to the cloned directory before executing step 3b and 4, 
+If the .venv folder is created outside the repository folder, there will be an error message like "no pyproject.toml file found" when executing step 5 to install the dependencies.
+The above error was encountered using a Windows PC. To change the directory, use:
+```cd "the directory path"
+eg: cd C:\Users\ray2g\vibe-trader
+```
 
-3. **Create a virtual environment with uv**
+
+3b. **Create a virtual environment with uv**
    ```sh
    uv venv
    ```
