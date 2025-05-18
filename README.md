@@ -60,12 +60,12 @@ The above error was encountered using a Windows PC. To change the directory, use
 For Example: cd C:\Users\ray2g\vibe-trader
 ```
 
-
 3b. **Create a virtual environment with uv**
    ```sh
    uv venv
    ```
    This will create a `.venv` folder in your project directory.
+   
 4. **Activate the virtual environment**
    - macOS/Linux:
      ```sh
@@ -75,10 +75,12 @@ For Example: cd C:\Users\ray2g\vibe-trader
      ```powershell
      .venv\Scripts\Activate.ps1
      ```
+     
 5. **Install dependencies**
    ```sh
    uv sync
    ```
+   
 6. **Configure VS Code to use the uv virtual environment**
    - Open the Command Palette (`Cmd+Shift+P` on macOS, `Ctrl+Shift+P` on Windows/Linux)
    - Type and select `Python: Select Interpreter`
