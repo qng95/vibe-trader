@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "alpaca-py>=0.40.1",
     "finnhub-python>=2.4.23",
+    "google-adk>=1.1.1",
     "jupyter>=1.1.1",
     "google-adk>=1.1.1",
     "jupyter>=1.1.1",
