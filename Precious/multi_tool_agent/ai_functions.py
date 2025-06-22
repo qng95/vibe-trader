@@ -1,4 +1,8 @@
 from datetime import date, timedelta
+from alpaca.trading.client import TradingClient
+from alpaca.trading.client import TradingClient
+from alpaca.trading.requests import MarketOrderRequest
+from alpaca.trading.enums import OrderSide, TimeInForce
 
 def fetch_stock_news(symbol: str) -> dict:
     """Fetch the latest news for a specific stock symbol.
@@ -27,3 +31,35 @@ def fetch_stock_news(symbol: str) -> dict:
     return extracted_news
 
 print(fetch_stock_news("AAPL"))
+
+
+def buy_stock(symbol: str, quantity: float) -> dict:
+    """Simulate buying a stock.
+
+    Args:
+        symbol (str): The stock ticker symbol of the company.
+        quantity (float): The number of shares to buy.
+
+    Returns:
+        dict: A dictionary containing the status and confirmation message.
+    """
+    # Simulate a stock purchase
+    trading_client = TradingClient('PKIZP2WBBTT7C0I49WXE', 'PxR7A4qGFfVHCoKtxePrSJucmhtGEpZg32ZzGVH6')
+    # preparing orders
+    market_order_data = MarketOrderRequest(
+        symbol=symbol,
+        qty=quantity,
+        side=OrderSide.BUY,
+        time_in_force=TimeInForce.DAY
+    )
+
+    # Market order
+    market_order = trading_client.submit_order(
+        order_data=market_order_data
+    )
+    
+    return {
+        "status": "success",
+        "message": f"Successfully bought {quantity} shares of {symbol}.",
+        "order_id": market_order.id
+    }
