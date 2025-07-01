@@ -57,3 +57,5 @@ docs/_build/
 
 # don't commit lock files
 uv.lock
+
+.env
