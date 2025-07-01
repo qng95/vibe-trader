@@ -9,10 +9,6 @@ dependencies = [
     "finnhub-python>=2.4.23",
     "google-adk>=1.1.1",
     "jupyter>=1.1.1",
-    "google-adk>=1.1.1",
-    "jupyter>=1.1.1",
-    "matplotlib>=3.10.3",
-    "reflex>=0.7.11",
 ]
 
 [dependency-groups]

@@ -54,3 +54,6 @@ docs/_build/
 *.cov
 # Pytest test coverage reports
 *.coverage
+
+# don't commit lock files
+uv.lock
